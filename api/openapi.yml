@@ -433,9 +433,14 @@ components:
           example: "100000000"
 
     Balances:
-      type: array
-      items:
-        $ref: '#/components/schemas/Balance'
+      type: object
+      required:
+        - balances
+      properties:
+        balances:
+          type: array
+          items:
+            $ref: '#/components/schemas/Balance'
 
     Fee:
       type: object
