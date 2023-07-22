@@ -369,6 +369,11 @@ components:
 
     Token:
       type: object
+      required:
+        - name
+        - symbol
+        - address
+        - decimals
       properties:
         name:
           type: string
