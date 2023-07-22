@@ -411,10 +411,14 @@ components:
       required:
         - address
         - nonce
+        - chain_id
       properties:
         address:
           type: string
           example: TK11GsFSR7uDSA7ZNFCb6Xq6d5drUB6R7n
+        chain_id:
+          type: string
+          example: 0xcd8690dc
         nonce:
           type: integer
           example: 6
