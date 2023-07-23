@@ -367,7 +367,7 @@ components:
           type: string
           example: error description
 
-    Token:
+    TronToken:
       type: object
       required:
         - name
@@ -404,7 +404,7 @@ components:
         tokens:
           type: array
           items:
-            $ref: '#/components/schemas/Token'
+            $ref: '#/components/schemas/TronToken'
 
     TronWallet:
       type: object
@@ -431,7 +431,7 @@ components:
         - wei_amount
       properties:
         token:
-          $ref: '#/components/schemas/Token'
+          $ref: '#/components/schemas/TronToken'
         wei_amount:
           type: string
           example: "100000000"
@@ -456,7 +456,7 @@ components:
           type: string
           example: "100000000"
         token:
-          $ref: '#/components/schemas/Token'
+          $ref: '#/components/schemas/TronToken'
 
     ReceiveTRC20Action:
       type: object
@@ -473,7 +473,7 @@ components:
           description: amount in quanta of tokens
           example: 1000000000
         token:
-          $ref: '#/components/schemas/Token'
+          $ref: '#/components/schemas/TronToken'
 
 
     SendTRC20Action:
@@ -491,7 +491,7 @@ components:
           description: amount in quanta of tokens
           example: 1000000000
         token:
-          $ref: '#/components/schemas/Token'
+          $ref: '#/components/schemas/TronToken'
 
     ContractDeployAction:
       type: object
