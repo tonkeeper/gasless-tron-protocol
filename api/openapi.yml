@@ -11,7 +11,7 @@ servers:
   - url: "https://testnet-tron.tonkeeper.com"
   - url: "http://localhost:5500"
 paths:
-  /v2/settings:
+  /api/v2/settings:
     get:
       description: Get service configuration
       operationId: getSettings
@@ -33,7 +33,7 @@ paths:
         '500':
           $ref: '#/components/responses/InternalError'
 
-  /v2/wallet/{owner_address}:
+  /api/v2/wallet/{owner_address}:
     get:
       description: Get user wallet address data
       operationId: getWallet
@@ -57,7 +57,7 @@ paths:
         '500':
           $ref: '#/components/responses/InternalError'
 
-  /v2/balance/{wallet_address}:
+  /api/v2/balance/{wallet_address}:
     get:
       description: Get wallet balance
       operationId: getWalletBalances
@@ -81,7 +81,7 @@ paths:
         '500':
           $ref: '#/components/responses/InternalError'
 
-  /v2/transactions/{transaction_hash}:
+  /api/v2/transactions/{transaction_hash}:
     get:
       description: Get transaction data
       operationId: getTransaction
@@ -105,7 +105,7 @@ paths:
         '500':
           $ref: '#/components/responses/InternalError'
 
-  /v2/wallet/{owner_address}/transactions:
+  /api/v2/wallet/{owner_address}/transactions:
     get:
       description: Get list of transactions
       operationId: getTransactions
@@ -156,7 +156,7 @@ paths:
         '500':
           $ref: '#/components/responses/InternalError'
 
-  /v2/wallet/{owner_address}/estimate:
+  /api/v2/wallet/{owner_address}/estimate:
     post:
       description: Get transaction estimate
       operationId: getEstimation
@@ -182,7 +182,7 @@ paths:
         '500':
           $ref: '#/components/responses/InternalError'
 
-  /v2/wallet/{owner_address}/publish:
+  /api/v2/wallet/{owner_address}/publish:
     post:
       description: Publish transaction
       operationId: publishTransaction
