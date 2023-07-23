@@ -212,7 +212,7 @@ components:
   parameters:
     ownerAddressParameter:
       in: path
-      name: owner_address
+      name: ownerAddress
       required: true
       description: owner address
       schema:
@@ -220,7 +220,7 @@ components:
         example: TK11GsFSR7uDSA7ZNFCb6Xq6d5drUB6R7n
     walletAddressParameter:
       in: path
-      name: wallet_address
+      name: walletAddress
       required: true
       description: wallet address
       schema:
@@ -228,7 +228,7 @@ components:
         example: TK11GsFSR7uDSA7ZNFCb6Xq6d5drUB6R7n
     transactionHashParameter:
       in: path
-      name: transaction_hash
+      name: transactionHash
       required: true
       description: transaction hash
       schema:
@@ -275,9 +275,9 @@ components:
     PublishPayload:
       type: object
       required:
-        - transaction_hash
+        - transactionHash
       properties:
-        transaction_hash:
+        transactionHash:
           type: string
     RequestMessage:
       type: object
@@ -395,14 +395,14 @@ components:
     TronSettings:
       type: object
       required:
-        - wallet_implementation
-        - chain_id
+        - walletImplementation
+        - chainId
         - tokens
       properties:
-        wallet_implementation:
+        walletImplementation:
           type: string
           example: TK11GsFSR7uDSA7ZNFCb6Xq6d5drUB6R7n
-        chain_id:
+        chainId:
           type: string
           example: 0xcd8690dc
         tokens:
@@ -415,12 +415,12 @@ components:
       required:
         - address
         - nonce
-        - chain_id
+        - chainId
       properties:
         address:
           type: string
           example: TK11GsFSR7uDSA7ZNFCb6Xq6d5drUB6R7n
-        chain_id:
+        chainId:
           type: string
           example: 0xcd8690dc
         nonce:
@@ -432,11 +432,11 @@ components:
       type: object
       required:
         - token
-        - wei_amount
+        - weiAmount
       properties:
         token:
           $ref: '#/components/schemas/TronToken'
-        wei_amount:
+        weiAmount:
           type: string
           example: "100000000"
 
@@ -536,13 +536,13 @@ components:
     Event:
       type: object
       required:
-        - tx_hash
+        - txHash
         - timestamp
         - actions
         - fees
-        - in_progress
+        - inProgress
       properties:
-        tx_hash:
+        txHash:
           type: string
           example: e8b0e3fee4a26bd2317ac1f9952fcdc87dc08fdb617656b5202416323337372e
         timestamp:
@@ -555,7 +555,7 @@ components:
             $ref: '#/components/schemas/Action'
         fees:
           $ref: '#/components/schemas/TronFee'
-        in_progress:
+        inProgress:
           type: boolean
           example: false
           description: Event is not finished yet. Transactions still happening
