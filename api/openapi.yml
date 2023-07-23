@@ -374,7 +374,11 @@ components:
         - symbol
         - address
         - decimals
+        - image
       properties:
+        image:
+          type: string
+          example: https://static.tronscan.org/production/logo/usdtlogo.png
         name:
           type: string
           example: Tether USD
