@@ -23,7 +23,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Settings'
+                $ref: '#/components/schemas/TronSettings'
         '401':
           $ref: '#/components/responses/UnauthorizedError'
         '400':
@@ -47,7 +47,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Wallet'
+                $ref: '#/components/schemas/TronWallet'
         '401':
           $ref: '#/components/responses/UnauthorizedError'
         '400':
@@ -71,7 +71,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Balances'
+                $ref: '#/components/schemas/TronBalances'
         '401':
           $ref: '#/components/responses/UnauthorizedError'
         '400':
@@ -388,7 +388,7 @@ components:
           type: integer
           example: 6
 
-    Settings:
+    TronSettings:
       type: object
       required:
         - wallet_implementation
@@ -406,7 +406,7 @@ components:
           items:
             $ref: '#/components/schemas/Token'
 
-    Wallet:
+    TronWallet:
       type: object
       required:
         - address
@@ -424,7 +424,7 @@ components:
           example: 6
 
 
-    Balance:
+    TronBalance:
       type: object
       required:
         - token
@@ -436,7 +436,7 @@ components:
           type: string
           example: "100000000"
 
-    Balances:
+    TronBalances:
       type: object
       required:
         - balances
@@ -444,9 +444,9 @@ components:
         balances:
           type: array
           items:
-            $ref: '#/components/schemas/Balance'
+            $ref: '#/components/schemas/TronBalance'
 
-    Fee:
+    TronFee:
       type: object
       required:
         - token
@@ -550,7 +550,7 @@ components:
           items:
             $ref: '#/components/schemas/Action'
         fees:
-          $ref: '#/components/schemas/Fee'
+          $ref: '#/components/schemas/TronFee'
         in_progress:
           type: boolean
           example: false
