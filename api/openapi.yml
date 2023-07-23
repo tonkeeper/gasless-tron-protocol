@@ -212,7 +212,7 @@ components:
   parameters:
     ownerAddressParameter:
       in: path
-      name: ownerAddress
+      name: owner_address
       required: true
       description: owner address
       schema:
@@ -220,7 +220,7 @@ components:
         example: TK11GsFSR7uDSA7ZNFCb6Xq6d5drUB6R7n
     walletAddressParameter:
       in: path
-      name: walletAddress
+      name: wallet_address
       required: true
       description: wallet address
       schema:
@@ -228,7 +228,7 @@ components:
         example: TK11GsFSR7uDSA7ZNFCb6Xq6d5drUB6R7n
     transactionHashParameter:
       in: path
-      name: transactionHash
+      name: transaction_hash
       required: true
       description: transaction hash
       schema:
