@@ -95,7 +95,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Event'
+                $ref: '#/components/schemas/TronEvent'
         '401':
           $ref: '#/components/responses/UnauthorizedError'
         '400':
@@ -146,7 +146,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Events'
+                $ref: '#/components/schemas/TronEvents'
         '401':
           $ref: '#/components/responses/UnauthorizedError'
         '400':
@@ -506,7 +506,7 @@ components:
           type: string
           example: TK11GsFSR7uDSA7ZNFCb6Xq6d5drUB6R7n
 
-    Action:
+    TronAction:
       type: object
       required:
         - type
@@ -533,7 +533,7 @@ components:
         ContractDeploy:
           $ref: '#/components/schemas/ContractDeployAction'
 
-    Event:
+    TronEvent:
       type: object
       required:
         - txHash
@@ -552,7 +552,7 @@ components:
         actions:
           type: array
           items:
-            $ref: '#/components/schemas/Action'
+            $ref: '#/components/schemas/TronAction'
         fees:
           $ref: '#/components/schemas/TronFee'
         inProgress:
@@ -560,7 +560,7 @@ components:
           example: false
           description: Event is not finished yet. Transactions still happening
 
-    Events:
+    TronEvents:
       type: object
       required:
         - events
@@ -568,7 +568,7 @@ components:
         events:
           type: array
           items:
-            $ref: '#/components/schemas/Event'
+            $ref: '#/components/schemas/TronEvent'
 
   responses:
     NotFound:
