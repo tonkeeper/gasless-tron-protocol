@@ -502,7 +502,7 @@ components:
       required:
         - address
       properties:
-        address:
+        ownerAddress:
           type: string
           example: TK11GsFSR7uDSA7ZNFCb6Xq6d5drUB6R7n
 
@@ -569,6 +569,8 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/TronEvent'
+        fingerprint:
+          type: string
 
   responses:
     NotFound:
