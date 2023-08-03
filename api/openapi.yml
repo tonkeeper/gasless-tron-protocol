@@ -528,11 +528,11 @@ components:
             - ok
             - failed
             - pending
-        ReceiveTRC20:
+        receiveTRC20:
           $ref: '#/components/schemas/ReceiveTRC20Action'
-        SendTRC20:
+        sendTRC20:
           $ref: '#/components/schemas/SendTRC20Action'
-        ContractDeploy:
+        contractDeploy:
           $ref: '#/components/schemas/ContractDeployAction'
 
     TronEvent:
