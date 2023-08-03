@@ -113,13 +113,17 @@ paths:
         - Tron
       parameters:
         - $ref: '#/components/parameters/ownerAddressParameter'
+        - name: fingerprint
+          in: query
+          schema:
+            type: string
         - name: limit
           in: query
           schema:
             type: integer
             format: int32
             maximum: 200
-            default: 100
+            default: 20
             example: 15
         - name: offset
           in: query
@@ -133,13 +137,11 @@ paths:
           schema:
             type: integer
             format: int32
-            default: 0
         - name: max_timestamp
           in: query
           schema:
             type: integer
             format: int32
-            default: 0
       responses:
         '200':
           description: block
