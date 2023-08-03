@@ -502,7 +502,7 @@ components:
     ContractDeployAction:
       type: object
       required:
-        - address
+        - ownerAddress
       properties:
         ownerAddress:
           type: string
