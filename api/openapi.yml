@@ -541,7 +541,6 @@ components:
         - txHash
         - timestamp
         - actions
-        - fees
         - inProgress
       properties:
         txHash:
